@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1654600179 source:d:\lab1lun\generala\generala\main.cpp
+	<iostream>
+	<cstdlib>
+	<locale.h>
+	"rlutil.h"
+	"calculos.h"
+	"combinaciones.h"
+	"funciones.h"
+
+1571584339 d:\lab1lun\generala\generala\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1654558934 d:\lab1lun\generala\generala\funciones.h
+
+1654558204 d:\lab1lun\generala\generala\calculos.h
+
+1654533533 d:\lab1lun\generala\generala\combinaciones.h
+
