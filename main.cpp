@@ -45,7 +45,7 @@ while(true) {
     opcM(" CUATRO JUGADORES ", 10, 16, (y==3));
     rlutil::locate(8, 13 + y);
     cout<<"»"<<endl;
-
+   //...
     int tecla = rlutil::getkey();
     switch(tecla) {
     case 14: //UP
