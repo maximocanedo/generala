@@ -72,14 +72,17 @@ int comenzarJuego(int jugadoresCantidad) {
         //cout<<endl;
        // for(int i = 0; i < dadosATirar; i++) cout<<"\t"<<i;
         cout<<endl;
-        for(int i = 0; i < dadosATirar; i++) cout<<"\t"<<dados[i];
+        for(int i = 0; i < dadosATirar; i++) DibujarDado(dados[i], i, 1);
+
+
 
         bool continuar = true;
 
         // Mientras el jugador quiera seguir tirando, o hasta que se le acaben los tiros, se ejecutará el siguiente código:
         while(continuar) {
             char decision;
-            cout<<endl<<endl;
+            cout<<endl<<endl<<endl<<endl<<endl;
+
             cout<<"¿Continuar lanzando? S/N: ";
             cin>>decision;
             if(decision == 'S') {

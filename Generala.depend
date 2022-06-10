@@ -28,3 +28,32 @@
 
 1654533533 d:\lab1lun\generala\generala\combinaciones.h
 
+1654887921 source:c:\users\delac\documents\github\generala\main.cpp
+	<iostream>
+	<cstdlib>
+	<locale.h>
+	"rlutil.h"
+	"calculos.h"
+	"combinaciones.h"
+	"funciones.h"
+
+1654872496 c:\users\delac\documents\github\generala\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1654892435 c:\users\delac\documents\github\generala\calculos.h
+
+1654872496 c:\users\delac\documents\github\generala\combinaciones.h
+
+1654891465 c:\users\delac\documents\github\generala\funciones.h
+

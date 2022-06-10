@@ -6,6 +6,86 @@ int lanzar() {
     return rand()%6+1;
 }
 
+
+
+int DibujarDado(int valor, int a, int b) {
+
+    int x, y;
+    x=(a*12)+5;
+    y=(b*6)+0;
+
+    rlutil::setBackgroundColor(rlutil::WHITE);
+    rlutil::setColor(rlutil::BLACK);
+
+    for(int i=y+1;i<y+6;i++){
+        rlutil::locate(x,i);
+        cout<<"         ";
+    }
+
+    string dado[3] = {};
+    switch(valor) {
+    case 1: dado[1] = "    ×    ";
+            break;
+    case 2: dado[0] = "  ×      ";
+            dado[2] = "      ×  ";
+            break;
+    case 3: dado[0] = "  ×      ";
+            dado[1] = "    ×    ";
+            dado[2] = "      ×  ";
+            break;
+    case 4: dado[0] = "  ×   ×  ";
+            dado[2] = dado[0];
+            break;
+    case 5: dado[0] = "  ×   ×  ";
+            dado[1] = "    ×    ";
+            dado[2] = dado[0];
+            break;
+    case 6: dado[0] = "  × × ×  ";
+            dado[2] = dado[0];
+            break;
+
+    }
+    rlutil::locate(x,y+2);
+    rlutil::setColor(rlutil::BLACK);
+    cout<<dado[0];
+    rlutil::locate(x,y+3);
+    rlutil::setColor(rlutil::BLACK);
+    cout<<dado[1];
+    rlutil::locate(x,y+4);
+    rlutil::setColor(rlutil::BLACK);
+    cout<<dado[2];
+
+    rlutil::setBackgroundColor(rlutil::BLACK);
+    rlutil::setColor(rlutil::WHITE);
+    return 0;
+
+
+
+}
+
+
+
+
+
+/*
+*********
+*********
+*
+*
+*********
+
+
+
+*/
+
+
+
+
+
+
+
+
+
 int getHigher(int vec[], int t) {
     int mayor;
     for(int i = 0; i < t; i++) if((i==0) || (vec[i]>mayor)) mayor = vec[i];
