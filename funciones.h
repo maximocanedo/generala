@@ -5,6 +5,7 @@ int comenzarJuego(int jugadoresCantidad) {
 
     setlocale(LC_ALL, "");
 
+
     const char hr[51] = "--------------------------------------------------";
     const int limite_jugadores = jugadoresCantidad;
     const int LIM_RONDAS = 3;
@@ -22,12 +23,16 @@ int comenzarJuego(int jugadoresCantidad) {
 
     char nombre[jugadoresCantidad][31];
     rlutil::cls();
+
+
     // Vamos a pedir los nombres de nuestros jugadores:
     for(int i = 0; i < jugadoresCantidad; i++) {
         cout<<"Jugador "<<i<<", ingresá tu nombre (Max. 30 caracteres): ";
         cin>>nombre[i];
         cout<<endl;
     }
+
+
 
     // ¡Que comience el juego!
     while(tillGameEnds) {
@@ -53,7 +58,7 @@ int comenzarJuego(int jugadoresCantidad) {
           , dadosATirar = 5;
 
         //¡Lanzamos los dados!
-        for(int i = 0; i < dadosATirar; i++) dados[i] = lanzar();
+        for(int i = 0; i < dadosATirar; i++) dados[i] = 6; //lanzar();
 
 
         //Ordenamos los dados de menor a mayor valor.
@@ -83,6 +88,8 @@ int comenzarJuego(int jugadoresCantidad) {
             char decision;
             cout<<endl<<endl<<endl<<endl<<endl;
 
+    ///
+
             cout<<"¿Continuar lanzando? S/N: ";
             cin>>decision;
             if(decision == 'S') {
@@ -93,7 +100,9 @@ int comenzarJuego(int jugadoresCantidad) {
                     cout<<endl<<i+1<<"/"<<dadosATirar<<". ¿Qué dado vas a tirar? ";
                     int da; cin>>da;
                     dados[da-1] = lanzar();
-                    cout<<endl<<"Nuevo valor del dado #"<<da<<": "<<dados[da-1]<<". ";
+                    for(int i = 0; i < dadosATirar; i++) DibujarDado(dados[i], i, 1);
+
+
                 }
             }
             else continuar = false;
@@ -113,12 +122,13 @@ int comenzarJuego(int jugadoresCantidad) {
 
         punt[jugadorActual][6] = escalera(dados); // Si hay escalera, se suman 25pts. Si no, acá da cero.
         punt[jugadorActual][7] = full(cuentaIs); // Lo mismo, con full.
-        punt[jugadorActual][8] = poker(cuentaIs);// Lo mismo, con póker.
+        punt[jugadorActual][8] = poker(cuentaIs); // Lo mismo, con póker.
         punt[jugadorActual][9] = generala(cuentaIs); // Lo mismo, con generala.
         bool esGeneralaServida = (rondas[jugadorActual] == 1) && (punt[jugadorActual][9] == 50);
 
         if(esGeneralaServida) {
             tillGameEnds = false;
+            // break;
             // Ha ganado. Termina el juego e inmediatamente se convierte en ganador.
             // PENDIENTE.
         }

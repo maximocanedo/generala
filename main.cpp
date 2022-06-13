@@ -23,8 +23,8 @@ void opcM(const char* text, int x, int y, bool s) {
 
 }
 
-int main()
-{
+int main() {
+
     setlocale(LC_ALL, "");
 
     // Menú principal
@@ -32,7 +32,8 @@ int main()
     rlutil::cls();
     int y = 0;
     rlutil::hidecursor();
-while(true) {
+
+    while(true) {
    // rlutil::cls();
 
     rlutil::locate(10, 8);
@@ -47,6 +48,7 @@ while(true) {
     cout<<"»"<<endl;
    //...
     int tecla = rlutil::getkey();
+
     switch(tecla) {
     case 14: //UP
         rlutil::locate(8, 13 + y);
