@@ -57,39 +57,11 @@
 
 1655152306 c:\users\delac\documents\github\generala\funciones.h
 
-1655151825 source:c:\users\delac\documents\#generala\generala\main.cpp
+1656791570 source:f:\documents\#generala\generala\main.cpp
 	<iostream>
 	<cstdlib>
 	<locale.h>
-	"rlutil.h"
-	"calculos.h"
-	"combinaciones.h"
-	"funciones.h"
-
-1654872496 c:\users\delac\documents\#generala\generala\rlutil.h
-	<iostream>
-	<string>
-	<cstdio>
-	<stdio.h>
-	<string.h>
-	<windows.h>
-	<conio.h>
-	<termios.h>
-	<unistd.h>
-	<sys/ioctl.h>
-	<sys/types.h>
-	<sys/time.h>
-
-1655917533 c:\users\delac\documents\#generala\generala\calculos.h
-
-1654872496 c:\users\delac\documents\#generala\generala\combinaciones.h
-
-1656074219 c:\users\delac\documents\#generala\generala\funciones.h
-
-1655151825 source:f:\documents\#generala\generala\main.cpp
-	<iostream>
-	<cstdlib>
-	<locale.h>
+	<time.h>
 	"rlutil.h"
 	"calculos.h"
 	"combinaciones.h"
@@ -109,9 +81,9 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1656414915 f:\documents\#generala\generala\calculos.h
+1656794479 f:\documents\#generala\generala\calculos.h
 
-1656375103 f:\documents\#generala\generala\combinaciones.h
+1656785541 f:\documents\#generala\generala\combinaciones.h
 
-1656416184 f:\documents\#generala\generala\funciones.h
+1656884349 f:\documents\#generala\generala\funciones.h
 

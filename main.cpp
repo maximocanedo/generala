@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <locale.h>
+#include <time.h>
 
 using namespace std;
 

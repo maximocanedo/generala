@@ -3,6 +3,7 @@
 
 
 int lanzar() {
+    srand(time(NULL));
     return rand()%6+1;
 }
 
@@ -11,8 +12,8 @@ int lanzar() {
 int DibujarDado(int valor, int a, int b) {
 
     int x, y;
-    x = (a*12) + 5;
-    y = (b*6) + 0;
+    x=(a*12)+5;
+    y=(b*6)+0;
 
     rlutil::setBackgroundColor(rlutil::WHITE);
     rlutil::setColor(rlutil::BLACK);
@@ -70,7 +71,12 @@ int DibujarDado(int valor, int a, int b) {
 /*
 *********
 *********
+*
+*
 *********
+
+
+
 */
 
 
@@ -87,28 +93,23 @@ int getHigher(int vec[], int t) {
     return mayor;
 }
 
-int getSecondHigher(int *vec, int t) {
+int getSecondHigher(int vec[], int t) {
     int smayor, max;
     for(int i = 0; i < t; i++) {
-            ///cout<<"VALOR ANALIZADO: "<<vec[i]<<endl;
         if(i==0) {
             max = vec[i];
             smayor = vec[i];
         }
-        else {
-                if(vec[i] > max) {
-                    smayor = max;
-                    max = vec[i];
-            }        else {
-            if((vec[i] > smayor) || (i==1)) smayor = vec[i];
+        else if(vec[i]>max) {
+            smayor = max;
+            max = vec[i];
         }
-        }
+        else if((vec[i] > smayor) || (i==1)) smayor = vec[i];
+        else {}
 
-
+        return smayor;
 
     }
-    ///cout<<"SMAYOR::: "<<smayor<<endl;
-        return smayor;
 }
 
 int puntuacion (int dados[], int val) {
@@ -119,14 +120,7 @@ int puntuacion (int dados[], int val) {
 
 int cuentaRepetidos (int vec[], int t, int num) {
     int cont = 0;
-    ///cout<<"CUENTAREPETIDOS RECIBIÓ LOS VALORES: ";
-    for(int i = 0; i < t; i++)  {
-        cout<<"\t"<<vec[i];
-            if(vec[i] == num) {
-        ///cout<<"CR::VEC[I]="<<vec[i]<<". NUM="<<num;
-         cont++;
-         ///cout<<"--"<<cont<<endl;
-    }} ///cout<<" Y CONTARÁ LAS VECES QUE APARECE "<<num<<": "<<cont<<" VECES. "<<endl;
+    for(int i = 0; i <= t; i++) if(vec[i] == num) cont++;
     return cont;
 }
 
