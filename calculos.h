@@ -94,22 +94,20 @@ int getHigher(int vec[], int t) {
 }
 
 int getSecondHigher(int vec[], int t) {
-    int smayor, max;
-    for(int i = 0; i < t; i++) {
-        if(i==0) {
-            max = vec[i];
-            smayor = vec[i];
-        }
-        else if(vec[i]>max) {
-            smayor = max;
-            max = vec[i];
-        }
-        else if((vec[i] > smayor) || (i==1)) smayor = vec[i];
-        else {}
+   int mayor = vec[0]
+     , smax = vec[0];
 
-        return smayor;
+     for(int i = 1; i < t; i++) {
 
-    }
+        if(vec[i] > mayor) {
+            smax = mayor;
+            mayor = vec[i];
+        } else {
+            if(smax < vec[i]) smax = vec[i];
+        }
+
+     }
+    return smax;
 }
 
 int puntuacion (int dados[], int val) {
